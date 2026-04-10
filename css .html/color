@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+
+</head>
+<body>
+    <p id="ijk"> hello </p>
+    <h1 class="hero"> hello </h1>
+
+    <p>Hello</p>
+
+</body>
+<style>
+
+    p {
+        color: red;
+    }
+
+    h1 {
+        color: azure;
+    }
+
+    /* universal selector */
+    * {
+        color: blueviolet;
+    }
+
+    /* id selector */
+    #ijk {
+        color: bisque;
+    }
+
+    /* class selector */
+    .hero {
+        color: blueviolet;
+    }
+
+</style>
+</html>

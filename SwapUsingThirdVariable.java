@@ -14,22 +14,6 @@ class SwapUsingThirdVariable {
 
         System.out.println("After Swapping:");
         System.out.println("a = " + a);
-        System.out.println("b = " 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        + b);
+        System.out.println("b = " + b);
     }
 }

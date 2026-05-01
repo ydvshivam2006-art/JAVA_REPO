@@ -1,32 +1,35 @@
-class Locker {
-    private int pin = 1234;
-    private boolean isOpen = false;
+// First Interface
+interface Interface1 {
+    void captureClick();   // click capture
+}
 
-    public void openLocker(int enteredPin) {
-        if (enteredPin == pin) {
-            isOpen = true;
-            System.out.println("Locker opened");
-        } else {
-            System.out.println("Wrong pin");
-        }
+// Second Interface
+interface Interface2 {
+    void captureVideo();   // video / second action capture
+}
+
+// Class implementing both interfaces
+class MyApp implements Interface1, Interface2 {
+
+    @Override
+    public void captureClick() {
+        System.out.println("Click captured (Capture 1)");
     }
 
-    public void checkStatus() {
-        if (isOpen) {
-            System.out.println("Locker is open");
-        } else {
-            System.out.println("Locker is closed");
-        }
+    @Override
+    public void captureVideo() {
+        System.out.println("Video captured (Capture 2)");
     }
 }
 
+// Main class
 public class Main {
     public static void main(String[] args) {
-        Locker A = new Locker();
 
-        A.checkStatus();
-        A.openLocker(1111);
-        A.openLocker(1234);
-        A.checkStatus();
+        MyApp obj = new MyApp();
+
+        // Calling both methods
+        obj.captureClick();   // Capture 1
+        obj.captureVideo();   // Capture 2
     }
 }

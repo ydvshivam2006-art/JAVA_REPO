@@ -1,37 +1,56 @@
-interface Printer {
-    void printing();
+abstract class Vehicle {
+    abstract void start();
+    abstract void stop();
 }
 
-interface Scanner {
-    void scanning();
-}
-
-interface Fax {
-    void faxing();
-}
-
-class AllInOne implements Printer, Scanner, Fax {
+class Car extends Vehicle {
     @Override
-    public void printing() {
-        System.out.println("Printing document...");
+    void start() {
+        System.out.println("Car start");
     }
 
     @Override
-    public void scanning() {
-        System.out.println("Scanning document...");
+    void stop() {
+        System.out.println("Car stop");
+    }
+}
+
+class Bike extends Vehicle {
+    @Override
+    void start() {
+        System.out.println("bike start");
     }
 
     @Override
-    public void faxing() {
-        System.out.println("Sending fax...");
+    void stop() {
+        System.out.println("bike stop");
+    }
+}
+
+class Bus extends Vehicle {
+    @Override
+    void start() {
+        System.out.println("bus start");
+    }
+
+    @Override
+    void stop() {
+        System.out.println("bus stop");
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        AllInOne device = new AllInOne();
-        device.printing();
-        device.scanning();
-        device.faxing();
+        Car car = new Car();
+        car.start();
+        car.stop();
+
+        Bike bike = new Bike();
+        bike.start();
+        bike.stop();
+
+        Bus bus = new Bus();
+        bus.start();
+        bus.stop();
     }
 }

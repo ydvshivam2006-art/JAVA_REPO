@@ -39,7 +39,7 @@ class Bus extends Vehicle {
     }
 }
 
-public class Main {
+public class VehicleMain {
     public static void main(String[] args) {
         Car car = new Car();
         car.start();

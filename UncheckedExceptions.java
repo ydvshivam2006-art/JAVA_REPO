@@ -1,0 +1,10 @@
+public class UncheckedExceptions {
+    public static void main(String[] args) {
+        int[] numbers = { 1, 2, 3 };
+        try {
+            System.out.println(numbers[10]);
+        } catch (RuntimeException e) {
+            System.out.println("Unchecked Exception caught: " + e.getClass().getSimpleName());
+        }
+    }
+}

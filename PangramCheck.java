@@ -1,4 +1,4 @@
-public class PangramCheck {
+`public class PangramCheck {
     public static void main(String[] args) {
         String str = "The quick brown fox jumps over the lazy dog";
         boolean[] alphabetPresent = new boolean[26];
